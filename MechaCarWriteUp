@@ -1,0 +1,34 @@
+Predictors of Vehicle MPG
+A multiple linear regression model that predicts the mpg (miles per gallon) of MechaCar prototypes was constructed, using a number of vehicle design specifications: vehicle length (feet), vehicle weight (pounds), spoiler angle (degrees), ground clearance (inches), and AWD (All-Wheel Drive, boolean).
+
+Two of the five predictors, vehicle length and ground clearance, were significantly associated with vehicle mpg.  For every additional foot in length, vehicle mpg increased by 6.3 mpg; and for every inch increase in ground clearance, vehicle mpg increased by 3.6 mpg.  
+
+The F-statistic value of 22.1 is significantly (p<0.001) different from 1.0, which is the value expected under the null hypothesis. Therefore, the slope of the linear model is not considered to be zero.  The adjusted R-squared value of 0.68 also indicates that most of the model variance can be explained by model predictors, effectively predicting mpg.
+
+Suspension Coil Summary
+The mean and the median PSI are 1500 psi(pounds per square inch).  The variance of 76.2 psi^2 meets the design specification that the variance must not exceed 100 psi. 
+
+A one-sample t-test of the sample mean PSI versus the population mean PSI of 1500 psi was performed.  The sample mean value of 1499.5 (95% CI: 1498.1, 1500.9) was not different from the population mean (t=-0.657, df=149, p=0.51).
+
+To verify that the variance limit of 100 psi^2 was met in each manufacturing lot, summary statistics for each lot were calculated.  While lots 1 and 2 met this design specification, the variance for manufacturing lot 3 was 220 psi^2, which exceeds 100 psi^2.  Further investigation of the high variance in Lot 3 is recommended.
+
+A two-sample t-test comparing Lots 1 and 2 vs. Lot 3 found no difference in mean value.
+
+A Study to Compare MechaCar Prototypes to Comparable Cars on the Market
+There are a number of currently available cars that MechaCar will need to outperform to be successful.  Potential features to evaluate include fuel efficiency, type, and ride quality.  Features that are not yet set and could be optimized include cost, available colors, and warranty.
+
+This study will evaluate the fuel efficiency of the MechaCar prototypes against the currently available cars.  Fuel efficiency is an important factor for consumers when purchasing a car because it impacts the cost of owning a vehicle.  The question we will answer is, "Do current MechaCar prototypes beat the competition in fuel efficiency?".
+
+The null hypothesis is:
+  MechaCar mean mpg is no different than competitor car mpg.
+  
+The alternative hypothesis is:
+  MechaCar mean mpg is higher than competitor car mpg.
+  
+This hypothesis can be tested using a two-sample t-test.  One sample would be made up of the MechaCar prototypes and the other sample would be made up of comparable on-market vehicles.  The assumption of normality in the distribution of mpg in both samples will be tested before proceeding.  The equality of variance will be tested to select the appropriately calculated p-value.
+
+Data for the comparable on-market vehicles will be derived from publicly available fuel economy data maintained by the Environmental Protection Agency at www.fueleconomy.gov.  Comparable vehicles will be identified by the strategic marketing group.
+
+Future research can evaluate additional vehicle features.
+
+
